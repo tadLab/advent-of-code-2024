@@ -22,11 +22,11 @@ sorted_left_numbers = sorted(left_numbers)
 #print(sorted_right_numbers)
 #print(sorted_left_numbers)
 
-total_distance = 0
+total = 0
 
-# Loop through the sorted right numbers and calculate the total distance
+# Loop through the sorted right numbers and calculate their existence in the left numbers
 for i in range(len(sorted_right_numbers)):
-    total_distance += abs(sorted_right_numbers[i] - sorted_left_numbers[i])
+    count = sorted_left_numbers.count(sorted_right_numbers[i])
+    total += count * sorted_right_numbers[i]
 
-print(total_distance)
-        
+print(total)
